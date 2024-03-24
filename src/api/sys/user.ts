@@ -4,10 +4,10 @@ import { LoginParams, LoginResultModel, GetUserInfoModel } from './model/userMod
 import { ErrorMessageMode } from '#/axios';
 
 enum Api {
-  Login = '/login',
-  Logout = '/logout',
-  GetUserInfo = '/getUserInfo',
-  GetPermCode = '/getPermCode',
+  Login = '/api/v1/admin/login',
+  Logout = '/api/v1/admin/logout',
+  GetUserInfo = '/api/v1/admin/getUserInfo',
+  GetPermCode = '/api/v1/admin/getPermCode',
   TestRetry = '/testRetry',
 }
 

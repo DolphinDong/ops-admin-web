@@ -38,7 +38,7 @@ export function checkStatus(
       }
       break;
     case 403:
-      errMessage = t('sys.api.errMsg403');
+      errMessage = msg || '权限拒绝';
       break;
     // 404请求不存在
     case 404:
@@ -74,7 +74,7 @@ export function checkStatus(
   if (errMessage) {
     if (errorMessageMode === 'modal') {
       createErrorModal({ title: t('sys.api.errorTip'), content: errMessage });
-    } else if (errorMessageMode === 'message') {
+    } else {
       error({ content: errMessage, key: `global_error_message_status_${status}` });
     }
   }
